@@ -1,0 +1,7 @@
+A web framework is a pre-defined application structure and a library of development tools, to
+make building a web application easier and more consistent.
+
+Express.js is one of the most popular Node.js web frameworks.
+
+Server means listening to our request.
+

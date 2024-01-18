@@ -1,0 +1,16 @@
+special routing method, app.all(), it can have all http methods. So far we are specifically mention,
+now i use app.all, i used it in server.js
+
+// app.all("/secret",(request,respone)=>{
+//     respone.send("You are in secret route.");
+//     respone.end();
+// })
+
+This is the get api, i saw it in chrome.
+
+It can also have POST, PUT, and DELETE http methods. Now i open postman for POST method and do the same
+thing.
+
+
+whether using GET, POST,
+PUT, DELETE, or any other HTTP request method supported in the HTTP module.

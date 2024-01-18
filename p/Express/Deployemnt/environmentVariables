@@ -1,0 +1,12 @@
+Consider environment variables as ‘Global’ or ‘Constant’ variables whose values do not
+change throughout the application’s lifecycle.
+
+Like dburl in edtech project.
+
+
+Inside the .env file put all common files throughtout our project. All must be in capital letter and
+not dat type required.  
+
+See the example in frontend and backend integration.
+
+For using this have to download npm install dotenv. then import it and use config method for configration.

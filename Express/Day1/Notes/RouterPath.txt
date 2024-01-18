@@ -1,0 +1,45 @@
+router.get("/myorders/prachi", (request, response) => {
+  response.send(`Prachi past orders page`);
+});
+
+router.post("/myorders/prachi", (request, response) => {
+  response.send(`Prachi past orders page`);
+});
+
+
+Both are not same, because both are having different http methods.
+
+Route paths, in combination with a
+request method, define the
+endpoints at which requests can be
+made
+
+
+combination of http method and the path called Route path.
+---------------------------------------------------------------------------------------
+
+The characters ?, +, *, and () as used
+in regular expression can be used in
+route paths as well.
+
+The hyphen (-) and the dot (.) are
+interpreted literally by string-based
+paths
+
+
+See the example in router-path.js
+
+1. ? , if the user missed one character as abcd, but user typed as acd, then also it will work.
+ab?cd, if user typed acd also works fine.
+
+2. +, if the user typed the particular character multiple times also it works.  
+ab+cd, if user typed abbbbbbbbcd also works fine.
+
+3. *, user can type anything in the place of * also works fine.
+ab*cd, if the user typed abswethacd also works fine
+
+4. () ?, ? mark is used for one character optional, if we want more than one char also it works.
+a(bc)?d, if the user typed ad also works fine. One important thind, we cant use immediately after /.
+------------------------------------------------------------------------------------------------
+
+The hyphen (-) and the dot (.) for more readibility.

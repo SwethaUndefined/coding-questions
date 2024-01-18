@@ -1,0 +1,19 @@
+Routing means assigning functions to respond to users’ requests.
+
+http methods:  GET,POST,PUT,DELETE( these methods act as middleware in express).
+
+We can create our own middleware also. That ill done it in server.js.
+
+function costumMiddleWare(){
+    console.log("In my custom middle ware");
+}
+
+This is my own middleware i have created. If i want to run this fn before the actual middleware, i have to call that fn before request and response parameter. See it in server.js
+
+next(); tells after own middleware go to req, res fn. Have to pass the next as paramter to my own middleware. Also next() also have access to request response, for that we also pass request response as parameter to my own middleware.
+
+
+We can create our own middleware as many as we want. 
+
+The next() function, when called, moves control to
+the next middleware or route.

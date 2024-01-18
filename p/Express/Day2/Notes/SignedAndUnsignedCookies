@@ -1,0 +1,11 @@
+A signed cookie is simply a signature attached to the cookie.
+So, the cookie will still be visible to the client. However, it has a signature. So, the server side
+code can detect if the client modified the cookie or not.
+ If the signature does not match, then it will give an error
+
+
+ res.cookie('name', 'value', {signed: true})
+
+
+Browsers are supposed to support at least 4096 bytes per cookie. To ensure that you do
+not exceed the limit, don’t exceed the size of 4093 bytes per domain.

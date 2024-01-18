@@ -1,0 +1,18 @@
+Express.js router, allows us to break our application into fragments that can have their own
+instances of express to work with. We can then bring them together in a very clean and
+modular way.
+
+First need to import the Router from express like
+
+const express = require('express');
+const router = express.Router();
+
+After all the router must export it. And then import the file wherever we want. Here i import it in server.js file. Then i use the router file, as 
+
+app.use('default route'which reach that route, all the routers for router-object file)
+
+app.use('/ecommerce',routerObject);
+
+we must use "use" middleware to use the routers from other files.
+------------------------------------------------------------------------------------------------------
+Why we are doing this, because if we have 80 router, I put 10 10 routes in 8 files and just import and use the routes like in server.js

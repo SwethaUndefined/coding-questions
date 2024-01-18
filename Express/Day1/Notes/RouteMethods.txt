@@ -1,0 +1,27 @@
+1. res.end() End the response process
+
+2. res.json() Send a JSON response.
+
+Eg:
+app.all("/secret",(request,response)=>{
+    response.json({
+        "name":"Swetha"
+    });
+    response.end();
+
+We can also send the json objects.
+
+3. res.redirect() Redirect a request.
+
+Eg:
+app.all("/secret",(request,response)=>{
+    response.redirect({
+       url
+    });
+    response.end();
+
+4. res.render() Render a view template, 
+Send the whole html page.
+
+5. res.sendStatus() Set the response status code and send its
+string representation as the response body.

@@ -1,0 +1,43 @@
+Encryption has been done using bcrypt package.
+
+Install bcrypt package, Go to signUp api for encrypt the password. 
+
+ const salt = bcrypt.genSaltSync(10);
+            const hash = bcrypt.hashSync(password,salt); //first parameter is what needs to be encrypt and then 2nd parameter is how strong it should be, that i did in previous line.
+            console.log(hash);
+
+That salt 10 means, 10 times it will strong our password.
+
+After encrypt the password, the next api login. whenever the user login, the plain text password has 
+to be compared with the user entered password. So in login api, we have the decrypt the encrypt password
+to plain text and then compare.
+
+That i do it in login api. 
+
+                if(bcrypt.compareSync(password,user.password)){   //password===user.password
+--------------------------------------------------------------------------
+
+Notes from PPT:
+
+The best way of protect your password is to employ the salted password hashing.
+
+hashing is the transformation of a string of characters into a usually shortand fixed-length value
+or key that represents thr original string.
+
+Some hashing Algorithms:
+1. Md5
+2. Sha1
+3. sha256
+
+Steps:
+
+1. The user creates an account
+2. Their password  is hashed and stored in the DB.
+3. When the user attempts  to login, the hash of the password they entered is checked against the hash 
+of their real password(retrieved from the DB).
+4. If the hash matches, the user is granted access. If not, the user is told they entered invalid
+login credentials.
+5. Steps 3 and 4 repeat everytime when the user login to their account. 
+--------------------------------------------------------------------------
+
+Salt is like a private key in authendicaiton process.

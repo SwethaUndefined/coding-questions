@@ -1,0 +1,7 @@
+If we send a fetch request to
+another website, it will probably
+fail.
+
+Cross-origin requests are sent to another domain (even a subdomain) or protocol or port and
+require special headers from the remote side.
+
